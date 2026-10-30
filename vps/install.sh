@@ -38,6 +38,7 @@ SERVER_SRC="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 mkdir -p "$INSTALL_DIR"
 echo "[+] Copying server files to $INSTALL_DIR..."
+rm -rf "$INSTALL_DIR/src" "$INSTALL_DIR/test" "$INSTALL_DIR/tools"
 cp -r "$SERVER_SRC/src" "$INSTALL_DIR/"
 cp -r "$SERVER_SRC/test" "$INSTALL_DIR/"
 cp -r "$SERVER_SRC/tools" "$INSTALL_DIR/"
